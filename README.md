@@ -20,7 +20,7 @@ http://monsite/myAdmin/index.php?A&Configuration\PriceScrapping
 Activate the module
 Edi a product, you will see a button close to the price
 
-
+See Marketplace for all informations
 Marketplace link : https://www.clicshopping.org/forum/files/file/17-apps-configuration-price-scrapping/
 
 ![pricescrapping](https://github.com/ClicShoppingOfficialModulesV3/apps_configuration_price_scrapping/blob/master/ModuleInfosJson/price_scrapping.png)
