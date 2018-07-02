@@ -21,7 +21,7 @@ Activate the module
 Edi a product, you will see a button close to the price
 
 
-Marketplace link : https://www.clicshopping.net/forum/files/file/17-apps-configuration-price-scrapping/
+Marketplace link : https://www.clicshopping.org/forum/files/file/17-apps-configuration-price-scrapping/
 
 ![pricescrapping](https://github.com/ClicShoppingOfficialModulesV3/apps_configuration_price_scrapping/blob/master/ModuleInfosJson/price_scrapping.png)
 
