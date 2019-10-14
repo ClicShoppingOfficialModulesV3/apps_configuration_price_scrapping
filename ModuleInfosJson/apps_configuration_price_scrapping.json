@@ -1,7 +1,7 @@
 {
   "title":			"apps_configuration_price_scrapping",
   "type":           "apps",
-  "vendor":			"Configuration",
+  "vendor":			"Catalog",
   "is_free":   "no",
   "is_core": "no",
   "website_link_to_sell" : "https://www.clicshopping.org/forum/files/file/17-apps-configuration-price-scrapping/",
@@ -10,7 +10,7 @@
   "license":			"GPL 2 - MIT",
   "tag":			    "configuration, scrapping, price, product",
   "install":            "includes/ClicShopping/Apps/Configuration/",
-  "module_directory":   "Configuration",
+  "module_directory":   "Catalog",
   "apps_name":          "PriceScrapping",
   "type_module":      "Fixe",
   "dependance":       "",
