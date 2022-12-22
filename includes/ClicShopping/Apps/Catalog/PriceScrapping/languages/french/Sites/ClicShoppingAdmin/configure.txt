@@ -1,0 +1,1 @@
+module_ot_short_title = Analyse prix competiteurs

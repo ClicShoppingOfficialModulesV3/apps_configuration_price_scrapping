@@ -1,0 +1,16 @@
+This is little example how to use the scrapping.
+Note : The template can change and theses elements below can become obsolete
+
+example : samsung tv
+
+LDLC.com
+hsearch : ttps://www.ldlc.com/recherche/{search_tag}/
+content css : div.listing-product
+css title : h3.title-3
+css price : div.price
+
+boulanger.com
+search : https://www.boulanger.com/c/televiseur/{search_tag}
+content css: div.productListe
+css title : a
+css price : span.exponent

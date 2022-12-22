@@ -1,0 +1,12 @@
+heading_title = Competitive analyse
+
+heading_title = Title
+heading_price = Price
+text_specific_search_keywords = Specific search keywords
+text_error_url_link = Url error : {{text_error_url}}
+text_no_result_identified = No result identified : {{text_error_url}}
+text_error_price_title_css = css element error
+
+button_update = Update
+button_cancel = Cancel
+button_print = Print

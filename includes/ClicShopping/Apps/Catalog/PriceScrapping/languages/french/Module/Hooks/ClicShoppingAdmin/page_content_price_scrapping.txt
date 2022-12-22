@@ -1,0 +1,8 @@
+text_title =  Analyse prix competiteurs
+text_information = Veuillez sélectionner vos critères d analyse
+text_web_search_criteria = Critères recherche
+text_web_search_keywords = mots clefs
+text_select_website = Sélectionner vos sites internet
+text_price_scrapping = Analyse prix competiteurs
+button_analyse = Analyser
+

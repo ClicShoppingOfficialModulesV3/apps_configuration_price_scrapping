@@ -1,0 +1,63 @@
+heading_title = Competitive price analyse
+module_ot_title = Competitive price analyse
+module_ot_short_title = Competitive price analyse
+
+text_price_scrapping = Competitive price analyse
+text_configure = Configure App Module
+
+text_intro = This app allow you to include a Competitive price analyse pages and a shortcut in products page. <br /><br />
+- Activate this module located in the Catalog menu
+
+module_ot_introduction = The install process create the database settings for this module and the access menu
+
+button_back = Back
+button_install_title = Install
+button_configure = Configure
+button_save = Save
+button_dialog_uninstall =  Uninstall
+button_uninstall =  Uninstall
+button_delete = Delete
+button_price_scrapping = Competitive price analyse
+button_cancel = Cancel
+button_new = New
+button_insert = Insert
+button_reset = Reset
+button_update = Update
+button_help = Help
+
+dialog_uninstall_title = Uninstall
+dialog_uninstall_body = Do you want to install this App ?
+dialog_uninstall_title = Uninstall Module?
+dialog_uninstall_body = Are you sure you want to uninstall this module?
+
+alert_module_install_success = Module has been successfully installed.
+alert_module_uninstall_success = Module has been successfully uninstalled.
+alert_cfg_saved_success = Catalog parameters have been successfully saved.
+
+text_result_page = Page {{listing_from}} of {{listing_total}}
+text_display_number_of_link = Display <strong>{{listing_from}}</strong> to <strong>{{listing_to}}</strong> (on <strong>{{listing_total}}</strong>)
+
+icon_edit = Edit
+icon_delete = delete
+text_set_default = Default
+
+text_info_delete_info = Delete this element ?
+
+table_heading_orders_status = Competitive price analyse
+table_heading_action = Action
+
+table_heading_website_title = Site
+table_heading_website_url = URL
+table_heading_action = Action
+table_heading_status = status
+
+text_info_heading_edit_price_scrapping = Competitor price analyse
+text_info_edit_intro = Please, fill these elements.  For all problems or difficulties, please, consult help section.
+text_info_price_scrapping_website_title = Site Title
+text_info_price_scrapping_website_url = Internet search engine URL
+text_info_price_scrapping_css_content = Content css analyse
+text_info_price_scrapping_css_title = Product name CSS
+text_info_price_scrapping_css_price = Product price name CSS
+
+text_error_composer = Composer is not installed, please make this command on your server in your terminal : apt-get install composer
+text_error_exec = exec function is not enabled. You can not update or install any composer library, please this setting in your php.ini or contact your hoster

@@ -1,0 +1,9 @@
+text_title = Competitive price analyse
+text_information = Please, select your criterias
+text_web_search_criteria = Search criterias
+text_web_search_keywords = my keywords
+text_select_website = Select your website
+text_price_scrapping = Competitive price analyse
+
+button_analyse = Analyse
+

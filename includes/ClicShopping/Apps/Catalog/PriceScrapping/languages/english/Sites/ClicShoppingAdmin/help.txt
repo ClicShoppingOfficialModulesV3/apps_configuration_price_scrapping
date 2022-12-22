@@ -1,0 +1,147 @@
+heading_title = Competitive price analyse
+text_info_heading_edit_help = Help in understanding syntax
+text_help =
+    <div class="separator"></div>
+    <div class="col-md-12 alert alert-info" role="alert">
+        Please take into consideration these elements. Price analysis can not be made on all sites<br />
+      <blockquote>
+        - The server or the analysis is made does not allow this type of drilling approach. <br />
+        - Several CSS class can be a problem = "css1 css2 css3" <br />
+        - Incorrectly inserted CSS will not be charged <br /> <br />
+        - A price result with 0 may indicate a difference in prices relative to the product name. <br />
+        - An iframe is used. Only the source HTML come will be analysed<br />
+        - The search is made on $_POST and no on $_GET <br />
+      </blockquote>
+    </div>
+    <div class="separator"></div>
+    <div class="col-md-12 text-info-warning">
+     Here are some examples that will help you in your analysis<br />
+     Please first use the "Examine Item" system of your browser and then select the outline to perform the analysis that contains all product informations<br /> <br />
+     <li>Identify the right url to insert :</li>
+      <blockquote>
+        - Please go to the site to analyze <br />
+        - Go the search engine and insert a search criterion <br />
+        - Identify the search url: https://www.mondomain.com/search?keywords=My+Search+of+Keywords <br />
+        - Register only this information: https://www.mondomain.com/search?keywords= <br /> <br />
+        <strong>Notes : </strong><br /><br />
+        - Some search engine may have an url of this type: https://www.mondomain.com/search?Ma+Search+of+Mots+Clef_uml <br />
+        - In this setting, please use the tag {{search_tag}}. The url becomes: https://www.mondomain.com/search?{{search_tag}}_uml <br /><br />
+        <strong>Checking : </strong><br /><br />
+        - In order to avoid any error in a search, I recommend you to check the search url. <br />
+        Some may write it this way: https://www.mondomain.com/search?keywords=My%20Search%20de%20Mots%20Clef<br />
+        - In this context check that this synthaxe is working properly https://www.mondomain.com/search?keywords=My+Search+of+keywords<br />
+      </blockquote>
+
+      <li>Identify the right CSS : </li>
+      <blockquote>
+        - content CSS (not mandatory but recommended): <br />
+        This CSS represents the central content of a page in order to restrict the area of analysis (we do not take the header / footer of the site, the base or the elements left or right) <br /> <br />
+        - CSS of the product title (required): <br />
+        This CSS represents the title of the product, It is to study the name of the CSS of the product <br /> <br />
+        - The CSS of the product price (required): <br />
+        This CSS represents the price of the product, It is to study the name of the price of the product <br /> <br />
+      </blockquote>
+
+      <li>Syntax example : </li>
+       <br>There may be compositions that can be made. Here are the most common.<br><br>
+      <table class="table-sm table-hover table-striped">
+      <thead>
+        <tr>
+          <td><strong>Specifications</strong></td>
+          <td><strong>Website CSS</strong></td>
+          <td><strong>CSS syntax to insert</strong></td>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>All elements with span or div class</td>
+            <td>span class="myclass"</td>
+            <td>span.myclass</td>
+          </tr>
+          <tr>
+            <td>All elements with span id or div id class</td>
+            <td>div id="monID"</td>
+            <td>div.#monID</td>
+          </tr>
+          <tr>
+            <td>All elements composed with some css inside</td>
+            <td>ul class="inline-span three-across fluid-two-across"</td>
+            <td>ul.inline-span.three-across.fluid-two-across</td>
+          </tr>
+          <tr>
+            <td>All elements with a link</td>
+            <td> a ref=""</td>
+            <td>a</td>
+          </tr>
+          <tr>
+            <td>All elements with an attribute</td>
+            <td>span itemprop="name"</td>
+            <td>span[itemprop=name] ou *[itemprop=name] for a global search</td>
+          </tr>
+          <tr>
+            <td>All elements with an input</td>
+            <td>input name="name"</td>
+            <td>input[name=name] ou input[name=\'name\'] ou input[name="name"]</td>
+          </tr>
+          <tr>
+            <td>All elements with a data-</td>
+            <td>data-attribute="name"</td>
+            <td>*[^data-=foo]</td>
+          </tr>
+          <tr>
+            <td>All links starting with https</td>
+            <td>https://wwww</td>
+            <td>a[href^=https]</td>
+          </tr>
+          <tr>
+            <td>All pictures starting with png, jpg</td>
+            <td>img src="mon image.png"</td>
+            <td>img[src$=png]</td>
+          </tr>
+          <tr>
+            <td>All links containing example.com</td>
+            <td>a href="example.com"</td>
+            <td>a[href*=example.com]</td>
+          </tr>
+          <tr>
+            <td>All links having a class</td>
+            <td>a class="name" href="monexemple.com"</td>
+            <td>a.name::text</td>
+          </tr>
+          <tr>
+            <td>All links having a href and title</td>
+            <td>a href="example.com" title="name"</td>
+            <td>a.name::attr(href|title)</td>
+          </tr>
+        </tbody>
+      </table>
+      <br /><br />
+      <strong>Finally, here are some concrete examples of sites</strong><br /><br />
+      <li>Domaine.com</li>
+      <blockquote>
+          site : https://www.Domaine.com/search/10/{{search_tag}}.html#_his<br />
+          contour : div.lpTopBox<br />
+          titre : div.prdtBTit<br />
+          prix : span.price<br />
+      </blockquote>
+      <br />
+      <li>Domaine1.com</li>
+      <blockquote><br />
+        url : https://Domaine1.ca/index.php?main_page=advanced_search_result&search_in_description=1&keyword=;<br />
+        contour : #productListing<br />
+        titre : div.product_name<br />
+        prix : div.prodprice<br />
+      </blockquote>
+      <br />
+      <li>Domaine2.com</li>
+      <blockquote><br />
+        url : https://www.Domaine2.com/recherche/<br />
+        Doesn't work because the research is made on $_POST and not $_GET
+      </blockquote>
+      <br />
+      <li>Domaine3.com</li>
+      <blockquote><br />
+        url : https://www.Domaine3.com/search/keyword=<br />
+        You think your enter all the parameters and seems good. You have not resut.
+        In this case edit the code and search the product title. If you found, you have a probem with your paramters, you don't found, in this case, it impossible to scrap the search page
+      </blockquote>

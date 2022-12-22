@@ -1,0 +1,12 @@
+heading_title = Analyse prix competiteurs
+
+heading_title = Titre
+heading_price = Prix
+text_specific_search_keywords = Specifique recherche par mots clef
+text_error_url_link = Erreur Url : {{text_error_url}}
+text_no_result_identified = Aucun résultat identifié : {{text_error_url}}
+text_error_price_title_css = erreur css élément
+
+button_update = Mettre à jour
+button_cancel = Annuler
+button_print = Imprimer

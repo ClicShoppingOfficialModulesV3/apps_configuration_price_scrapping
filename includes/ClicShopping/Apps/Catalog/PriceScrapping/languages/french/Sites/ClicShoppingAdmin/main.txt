@@ -1,0 +1,61 @@
+heading_title = Analyse prix competiteurs
+module_ot_title = Analyse prix competiteurs
+module_ot_short_title = Analyse prix competiteurs
+
+text_price_scrapping = Analyse prix competiteurs
+text_configure =  Configurer App Module
+
+text_intro = Cette app vous permet d'inclure un Analyse prix competiteurs <br /><br />
+- Activer ce module qui est situé dans le menu Catalog
+
+module_ot_introduction = Le processus d'installation installe la base de données et le menu
+module_ot_short_title = Analyse prix competiteurs
+
+button_install_title = Installer
+button_configure = Configurer
+button_save = Sauver
+button_dialog_uninstall =  Désinstaller
+button_uninstall =  Désinstaller
+button_delete = Supprimer
+button_price_scrapping = Analyse prix competiteurs
+button_cancel = Annuler
+button_new = Nouveau
+button_insert =  Insérer
+button_back = Retour
+button_reset = Réinitialiser
+button_update = Mettre à jour
+button_help = Aide
+
+dialog_uninstall_title = Désinstaller
+dialog_uninstall_body = Souhaitez-vous installer cette App ?
+dialog_uninstall_title = Désinstaller le module?
+dialog_uninstall_body = Etes vous sur de désinstaller ce module?
+
+alert_module_install_success = Le module a été installée.
+alert_module_uninstall_success = Le module a été désinstallée.
+alert_cfg_saved_success = les paramètres de configuration ont été mises à jour.
+
+text_result_page = Page {{listing_from}}  sur{{listing_total}}
+text_display_number_of_link = Affiche <strong>{{listing_from}}</strong> à <strong>{{listing_to}}</strong> (sur <strong>{{listing_total}}</strong>)
+
+icon_edit = Editer
+icon_delete = Supprimer
+text_set_default = Défaut
+
+text_info_delete_info = Supprimer cet élément ?
+
+table_heading_website_title = Site
+table_heading_website_url = URL
+table_heading_action = Action
+table_heading_status = status
+
+text_info_heading_edit_price_scrapping = Analyse des prix des compétiteurs
+text_info_edit_intro = Veuillez compléter les informations suivantes.  Pour tout problèmes ou difficulté veuillez consulter la section aide.
+text_info_price_scrapping_website_title = Titre du site
+text_info_price_scrapping_website_url = Url du moteur de recherche
+text_info_price_scrapping_css_content = CSS du contour d'analyse
+text_info_price_scrapping_css_title = CSS du nom du produit
+text_info_price_scrapping_css_price = CSS du prix du produit
+
+text_error_composer = Composer n'est pas installé sur votre machine, veuillez réaliser cette commande dans votre terminal : apt-get install composer
+text_error_exec = La fonction exec n'est pas initialisé. Vous ne pouvez pas réaliser de mise à jour ou d'installation d'une librairie Composer. Veuillez vérifier votre php.ini ou contacter votre hébergeur

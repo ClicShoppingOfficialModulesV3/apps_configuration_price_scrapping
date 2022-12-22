@@ -1,0 +1,6 @@
+cfg_products_price_scrapping_status_title = Statut
+cfg_products_price_scrapping_status_description = Souhaitez vous activer ce module à votre boutique
+
+cfg_products_price_scrapping_status_true = True
+cfg_products_price_scrapping_status_false = False
+

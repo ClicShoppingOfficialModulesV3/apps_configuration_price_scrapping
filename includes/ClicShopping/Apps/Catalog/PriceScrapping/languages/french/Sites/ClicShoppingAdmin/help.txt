@@ -1,0 +1,146 @@
+heading_title = Analyse prix competiteurs
+text_info_heading_edit_help = Analyse prix competiteurs
+text_help =
+    <div class="separator"></div>
+    <div class="col-md-12 alert alert-info" role="alert">
+        Veuillez prendre en considérations ces éléments. L'analyse des prix ne peut pas se faire sur tous les sites<br />
+      <blockquote>
+      - Le serveur ou l'analyse qui est faite n'autorise pas ce type d'approche de forage.<br />
+      - Les css composés peuvent poser problèmes class="css1 css2 css3"<br />
+      - Un css mal inséré ne sera pas pris en compte<br />
+      - Un résultat 0 sur les prix risque d'indiquer un décalage sur les tarifs par rapport au nom du produit.<br />
+      - Un iframe n'est pas pris en compte. Seul le socle HTML affiché est traité<br />
+      - La recherche se fait sur un $_POST et non sur $_GET<br />
+      </blockquote>
+    </div>
+    <div class="separator"></div>
+    <div class="col-md-12 text-info-warning">
+      Voici des exemples qui pourront vous aider dans votre analyse<br />
+      Veuillez utiliser d'abord le système "Examiner un élément" de votre navigateur puis sélectionner le contour ou sera effectué l'analyse qui contient toutes les informations des produits<br /><br />
+      <li>Identifier la bonne url à insérer : </li>
+      <blockquote>
+        - Veuillez vous rendre sur le site à analyser<br />
+        - Allez le moteur de recherche et insérer un critère de recherche<br />
+        - identifier l'url de recherche : https://www.mondomain.com/search?keywords=Ma+Recherche+de+Mots+Clef<br />
+        - Inscriver unique cette informations : https://www.mondomain.com/search?keywords=<br /><br />
+        <strong>Notes : </strong><br /><br />
+        - Certains moteur de recherche peuvent avoir une url de ce type : https://www.mondomain.com/search?Ma+Recherche+de+Mots+Clef_uml<br />
+        - Dans ce cadre veuiller utilise le tag {{search_tag}}. L'url devient : https://www.mondomain.com/search?{{search_tag}}_uml<br /><br />
+        <strong>Vérification : </strong><br /><br />
+        - Afin d'éviter toute erreur dans un recherche, je vous recommande de vérifier l'url de recherche.<br />
+          Certains peuvent l'écrire de cette manière : https://www.mondomain.com/search?keywords=Ma%20Recherche%20de%20Mots%20Clef<br />
+        - Dans ce cadre vérifier que cette synthaxe fonctionne correctement  https://www.mondomain.com/search?keywords=Ma+Recherche+de+Mots+Clef<br />
+      </blockquote>
+
+      <li>Identifier les bon CSS d'analyse : </li>
+      <blockquote>
+        - Le CSS de contour (non obligatoire mais recommandé): <br />
+          Ce CSS représente le contour central d'une page afin de restreindre la zone d'analyse (on ne prend pas le l'entête du site, le base ou encore les élément à gauche ou à droite)<br /><br />
+        - Le CSS du titre du produit (obligatoire) : <br />
+          Ce CSS représente le titre du produit, Il s'agit d'étudier le nom du CSS du produit<br /><br />
+        - Le CSS du tarif du produit (obligatoire) : <br />
+          Ce CSS représente le tarif du produit, Il s'agit d'étudier le nom du tarif du produit<br /><br />
+      </blockquote>
+
+      <li>Exemple de synthaxe : </li>
+       <br>Il peut y avoir des compositions qui peuvent être faites. Voici les plus communes.<br><br>
+      <table class="table-sm table-hover table-striped">
+      <thead>
+        <tr>
+          <td><strong>Specifications</strong></td>
+          <td><strong>CSS du site</strong></td>
+          <td><strong>Synthaxe CSS à insérer</strong></td>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tous éléments avec span ou div class</td>
+            <td>span class="maclasse"</td>
+            <td>span.maclasse</td>
+          </tr>
+          <tr>
+            <td>Tous éléments avec span id ou div id class</td>
+            <td>div id="monID"</td>
+            <td>div.#monID</td>
+          </tr>
+          <tr>
+            <td>Tous les éléments composées avec plusieurs css</td>
+            <td>ul class="inline-span three-across fluid-two-across"</td>
+            <td>ul.inline-span.three-across.fluid-two-across</td>
+          </tr>
+          <tr>
+            <td>Tous éléments avec un lien</td>
+            <td> a ref=""</td>
+            <td>a</td>
+          </tr>
+          <tr>
+            <td>Tous éléments avec un attribut</td>
+            <td>span itemprop="name"</td>
+            <td>span[itemprop=name] ou *[itemprop=name] pour une recherche globale</td>
+          </tr>
+          <tr>
+            <td>Tous éléments avec un input</td>
+            <td>input name="name"</td>
+            <td>input[name=name] ou input[name=\'name\'] ou input[name="name"]</td>
+          </tr>
+          <tr>
+            <td>Tous éléments avec un data-</td>
+            <td>data-attribute="name"</td>
+            <td>*[^data-=foo]</td>
+          </tr>
+          <tr>
+            <td>Tous liens commencant par https</td>
+            <td>https://wwww</td>
+            <td>a[href^=https]</td>
+          </tr>
+          <tr>
+            <td>Toutes les images commencant ayant comme extension png</td>
+            <td>img src="mon image.png"</td>
+            <td>img[src$=png]</td>
+          </tr>
+          <tr>
+            <td>Touts les liens contenant exemple.com</td>
+            <td>a href="exemple.com"</td>
+            <td>a[href*=exemple.com]</td>
+          </tr>
+          <tr>
+            <td>Tous les liens ayant une classe</td>
+            <td>a class="name" href="monexemple.com"</td>
+            <td>a.name::text</td>
+          </tr>
+          <tr>
+            <td>Tous les liens ayant une href et title</td>
+            <td>a href="monexemple.com" title="name"</td>
+            <td>a.name::attr(href|title)</td>
+          </tr>
+        </tbody>
+      </table>
+      <br /><br />
+      <strong>Pour finir voici quelques exemples concrets de site</strong><br /><br />
+      <li>Domaine.com</li>
+      <blockquote>
+          site : https://www.Domaine.com/search/10/{{search_tag}}.html#_his<br />
+          contour : div.lpTopBox<br />
+          titre : div.prdtBTit<br />
+          prix : span.price<br />
+      </blockquote>
+      <br />
+      <li>Domaine1.com</li>
+      <blockquote><br />
+        url : https://Domaine1.ca/index.php?main_page=advanced_search_result&search_in_description=1&keyword=;<br />
+        contour : #productListing<br />
+        titre : div.product_name<br />
+        prix : div.prodprice<br />
+      </blockquote>
+      <li>Domaine2.com</li>
+      <blockquote><br />
+        url : https://www.Domaine2.com/recherche/<br />
+        Ne fonctionne pas car la recherche se fait sur $_POST et non $_GET
+      </blockquote>
+      <br />
+      <li>Domaine3.com</li>
+      <blockquote><br />
+        url : https://www.Domaine3.com/search/keyword=<br />
+        Vous pensez avoir entré correctement tous les paramètres. Vous avez aucun résultat
+        Dans ce cas, veuillez éditer le code source, rechercher le nom du produit. Si vous le trouvez, vous avez un problème de paramètres, sinon c'est impossible d'analyer cette page.
+      </blockquote>
